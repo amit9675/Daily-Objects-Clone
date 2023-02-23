@@ -5,8 +5,8 @@ import AllRoutes from './Components/AllRoutes';
 import { AccountPage } from './Pages/UserAccount/AccountPage';
 
 function App() {
- 
-  
+
+
   
   return (
     <div className="App">     
@@ -17,5 +17,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
