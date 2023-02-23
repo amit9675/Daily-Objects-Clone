@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Cases from '../Pages/Cases and sleeves/Cases'
+import Cases from '../Pages/Cases and sleeves/cases'
 
 
 // import Cases from '../Pages/Cases and sleeves/Cases'
@@ -20,6 +20,12 @@ import Messenger from './Laptop Macbook Sleeves/GroupSingle/Messenger'
 import ZippedSleeves from './Laptop Macbook Sleeves/GroupSingle/ZippedSleeves'
 import NewArrivalComp from './NewArrivalComp/NewArrivalComp'
 import NewArrivalsPage from '../Pages/NewArrivalsPage.jsx/NewArrivalsPage'
+import Watchbands from './NewArrivalComp/Watchbands'
+import MessengerBags from './NewArrivalComp/MessengerBags'
+import PedalBackPack from './NewArrivalComp/PedalBackPack'
+import Desks from './NewArrivalComp/Desks'
+import ChargingSolution from './NewArrivalComp/ChargingSolution'
+import AllArrivals from './NewArrivalComp/AllArrivals'
 
 export default function AllRoutes() {
   return (
@@ -42,6 +48,13 @@ export default function AllRoutes() {
             <Route path='/cases/laptopcovers/macbook'  element={<MacbookSleeves/>}/>
             <Route path='/cases/laptopcovers/envelope'  element={<Envelop/>}/>
             <Route path='/cases/laptopcovers/messenger'  element={<Messenger/>}/>
+
+            <Route path='/newarrivalcomp/allarrivals'  element={<AllArrivals/>}/>
+            <Route path='/newarrivalcomp/watchbands'  element={<Watchbands/>}/>
+            <Route path='/newarrivalcomp/pedalbackpack'  element={<PedalBackPack/>}/>
+            <Route path='/newarrivalcomp/messengerbags'  element={<MessengerBags/>}/>
+            <Route path='/newarrivalcomp/desks'  element={<Desks/>}/>
+            <Route path='/newarrivalcomp/chargingsolution'  element={<ChargingSolution/>}/>
             <Route path='/newarrivalspage' element={<NewArrivalsPage/>}></Route>
             <Route path='/newarrivalcomp' element={<NewArrivalComp/>}></Route>
             {/* <Route path='/cases/phonecovers' element={<PhoneCovers/>}/> */}

@@ -15,7 +15,7 @@ const Navbar = () => {
             <nav class="menu">
               <ul class="menu-main">
                 <li class="menu-item-has-children">
-                  <Link to={"newarrivalspage"} id="new">
+                  <Link to={"/newarrivalspage"} id="new">
                     NEW ARRIVAL
                   </Link>
                   <div class="sub-menu mega-menu mega-menu-column-4">
@@ -569,7 +569,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar__icons">
-        <a href="./cart.jsx">
+        <a href="./Cart.jsx">
           <FaShoppingCart />
         </a>
         <a href="./account.jsx">
