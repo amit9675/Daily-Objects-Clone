@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Cases from '../Pages/Cases and sleeves/cases'
 
-
+import SingleWatchband from "./NewArrivalComp/SinglePage/SingleWatchband"
 // import Cases from '../Pages/Cases and sleeves/Cases'
 import Home from '../Pages/Home/Home'
 import FilterMobiles from './Cases and covers/FilterMobiles'
@@ -26,7 +26,8 @@ import PedalBackPack from './NewArrivalComp/PedalBackPack'
 import Desks from './NewArrivalComp/Desks'
 import ChargingSolution from './NewArrivalComp/ChargingSolution'
 import AllArrivals from './NewArrivalComp/AllArrivals'
-
+import Cart from "../Pages/cart/Cart";
+import BuyNow from "../Pages/BuyNow";
 export default function AllRoutes() {
   return (
     <div>
@@ -58,7 +59,9 @@ export default function AllRoutes() {
             <Route path='/newarrivalspage' element={<NewArrivalsPage/>}></Route>
             <Route path='/newarrivalcomp' element={<NewArrivalComp/>}></Route>
             {/* <Route path='/cases/phonecovers' element={<PhoneCovers/>}/> */}
-
+            <Route path="/cart" element={<Cart />} />
+        <Route path="/buynow" element={<BuyNow />} />
+       <Route path="/singlewatchband/:id" element={<SingleWatchband/>}></Route>
         </Routes>
     </div>
   )

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Alert, Button, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -28,7 +29,9 @@ alert(`${text} has been added to your wishlist`)
   return (
     <div style={{ textAlign: "start" }}>
       <div style={{ backgroundColor: "rgb(247,247,247)" }}>
+      <Link to={`/${brand}/${id}`} >
         <img src={image} alt="" />
+        </Link>
         <Button
           isDisabled={isThere.includes(id)}
           size={"lg"}
@@ -42,7 +45,7 @@ alert(`${text} has been added to your wishlist`)
         {title}
       </Heading>
       <h1>
-        {price?price :`sold out`} <del>{strike && strike}</del>{" "}
+        {price} <del>{strike}</del>{" "}
       </h1>
       <Heading size={"xs"} color="red">
         BUY 1 GET 1 FREE
