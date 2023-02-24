@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Cases from "../Pages/Cases and sleeves/Cases";
+// import Cases from "../Pages/Cases and sleeves/Cases";
 
 
 
@@ -39,6 +39,9 @@ import ChargingSolution from './NewArrivalComp/ChargingSolution'
 import AllArrivals from './NewArrivalComp/AllArrivals'
 import Cart from "../Pages/cart/Cart";
 import BuyNow from "../Pages/BuyNow";
+import IndividualPhoneCoverData from "./NewArrivalComp/SinglePage/SingleWatchband"
+import Sale from "./Sale/Sale";
+import AllAccessories from "./Accessories/AllAccessories";
 
 
 
@@ -51,7 +54,7 @@ export default function AllRoutes() {
     <div>
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/cases' element={<Cases/>}/>
+            {/* <Route path='/cases' element={<Cases/>}/> */}
             <Route path='/cases/phonecovers' element={<PhoneCovers/>}/>
             <Route path='/rewards' element={<Rewards/>}/>
             <Route path='/cases/phonecovers' element={<FilterMobiles/>}/>
