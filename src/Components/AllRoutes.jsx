@@ -1,11 +1,8 @@
 
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Cases from '../Pages/Cases and sleeves/cases'
-// import Home from '../Pages/Home/Home'
-// import PhoneCovers from './Cases and covers/GroupSingle/PhoneCovers'
-// import Cases from '../Pages/Cases and sleeves/cases'
-// import Cases from '../Pages/Cases and sleeves/Cases'
+import Cases from '../Pages/Cases and sleeves/Cases'
+
 import Home from '../Pages/Home/Home'
 import { AccountPage } from '../Pages/UserAccount/AccountPage'
 import { Rewards } from '../Pages/UserAccount/Reward'
@@ -22,30 +19,12 @@ import LaptopCoverNavbar from './Laptop Macbook Sleeves/GroupSingle/LaptopCoverN
 import MacbookSleeves from './Laptop Macbook Sleeves/GroupSingle/MacbookSleeves'
 import Messenger from './Laptop Macbook Sleeves/GroupSingle/Messenger'
 import ZippedSleeves from './Laptop Macbook Sleeves/GroupSingle/ZippedSleeves'
-
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Cases from "../Pages/Cases and sleeves/Cases";
-
-// import Cases from '../Pages/Cases and sleeves/Cases'
-import Home from "../Pages/Home/Home";
-import FilterMobiles from "./Cases and covers/FilterMobiles";
-import PhoneCovers from "./Cases and covers/GroupSingle/Iphone.jsx/PhoneCovers";
-import OppoCover from "./Cases and covers/GroupSingle/Oppo/OppoCover";
-import NothingCover from "./Cases and covers/Nothing/NothingCover";
-import OneplusCover from "./Cases and covers/Onepus/OneplusCover";
-import SamsumgCover from "./Cases and covers/Samsung/SamsumgCover";
-import VivoCover from "./Cases and covers/Vivo/VivoCover";
-import All from "./Laptop Macbook Sleeves/GroupSingle/All";
-import Envelop from "./Laptop Macbook Sleeves/GroupSingle/Envelop";
-import LaptopCoverNavbar from "./Laptop Macbook Sleeves/GroupSingle/LaptopCoverNavbar";
-import MacbookSleeves from "./Laptop Macbook Sleeves/GroupSingle/MacbookSleeves";
-import Messenger from "./Laptop Macbook Sleeves/GroupSingle/Messenger";
-import ZippedSleeves from "./Laptop Macbook Sleeves/GroupSingle/ZippedSleeves";
 import NewArrivalComp from "./NewArrivalComp/NewArrivalComp";
 import NewArrivalsPage from "../Pages/NewArrivalsPage.jsx/NewArrivalsPage";
 import AllAccessories from "./Accessories/AllAccessories";
 import Sale from "./Sale/Sale";
+import SingleWatchband from "./NewArrivalComp/SinglePage/SingleWatchband"
+
 import IndividualPhoneCoverData from "./Cases and covers/SingleSingle/IndividualPhoneCoverData";
 
 import Cart from "../Pages/cart/Cart";
@@ -115,6 +94,7 @@ export default function AllRoutes() {
         <Route path="/wallets" element={<AllAccessories />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/buynow" element={<BuyNow />} />
+        <Route path="/singlewatchband/:id" element={<SingleWatchband/>}></Route>
       </Routes>
 
     </div>

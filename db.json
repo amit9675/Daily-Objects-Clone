@@ -1279,7 +1279,6 @@
       "brand": "FREE DUFFLE BAG / KEYCHAIN SET*"
     }
   ],
-
   "DUFFLEBAGS": [
     {
       "image": "https://images.dailyobjects.com/marche/product-images/1205/all-clove-trail-weekender-images/All-Clove-Trail-Weekender-p.png?tr=cm-pad_resize,v-2,w-393,h-484,dpr-1",
@@ -1534,16 +1533,20 @@
   ],
   "WishlistiphoneCovers": [
     {
-      "href": "https://www.dailyobjects.com/dailyobjects-dual-holo-satin-glass-case-cover-for-xiaomi-mi-11i/dp?f=pid~GLAS-DUAL-HOLO-SATI-DOB-XI-MI11I&amp;s=referer~lp",
-      "image": "https://images.dailyobjects.com/marche/product-images/1101/dailyobjects-dual-holo-satin-glass-case-cover-for-xiaomi-mi-11i-images/DailyObjects-Dual-Holo-Satin-Glass-Case-Cover-For-Xiaomi-Mi-11i.png?tr=cm-pad_resize,v-2,w-368,h-453,dpr-2,q-60",
-      "title": "Dual Holo Satin Glass Case Cover For Xiaomi Mi 11i",
-      "id": 699
+      "anchor-tag href": "https://www.dailyobjects.com/dailyobjects-feathers-33-trapeze-crossbody-bag/dp?f=pid~FEAT-33-JOC-TRAPEZE-CROSSBODY-BAG&amp;s=referer~lp",
+      "image": "https://images.dailyobjects.com/marche/product-images/bags-and-sleeves/dailyobjects/crossbody-bags/dailyobjects-feathers-33-trapeze-crossbody-bag-images/DailyObjects-Feathers-33-Trapeze-Crossbody-Bag.png?tr=cm-pad_resize,v-2,w-368,h-453,dpr-2,q-60",
+      "ttite": "Feathers 33 - Trapeze Crossbody Bag",
+      "price": "Rs.2499",
+      "id": 1021
     },
     {
-      "href": "https://www.dailyobjects.com/dailyobjects-guwahati-city-tag-glass-case-cover-for-xiaomi-mi-11i/dp?f=pid~GLAS-GUWA-CITY-TAG-DOB-XI-MI11I&amp;s=referer~lp",
-      "image": "https://images.dailyobjects.com/marche/product-images/1101/dailyobjects-guwahati-city-tag-glass-case-cover-for-xiaomi-mi-11i-images/DailyObjects-Guwahati-City-Tag-Glass-Case-Cover-For-Xiaomi-Mi-11i.png?tr=cm-pad_resize,v-2,w-368,h-453,dpr-2,q-60",
-      "title": "Guwahati City Tag Glass Case Cover For Xiaomi Mi 11i",
-      "id": 700
+      "href": "https://www.dailyobjects.com/dailyobjects-pyaar-scissors-black-hybrid-clear-case-cover-for-iphone-14/dp?f=pid~BLK-HYBRD-CLR-PYAA-SCIS-AP-IPH14&amp;s=referer~lp",
+      "image": "https://images.dailyobjects.com/marche/product-images/1101/dailyobjects-pyaar-scissors-black-hybrid-clear-case-cover-for-iphone-14-images/DailyObjects-Pyaar-Scissors-Black-Hybrid-Clear-Case-Cover-For-iPhone-14.png?tr=cm-pad_resize,v-2,w-368,h-453,dpr-2,q-60",
+      "title": "Pyaar Scissors Black Hybrid Clear Case Cover For iPhone 14",
+      "price": "Rs.1199",
+      "strike": "2199",
+      "new": "NEW!",
+      "id": 23
     }
   ],
   "iphoneCovers": [
