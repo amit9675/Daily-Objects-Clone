@@ -1,10 +1,20 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Cases from '../Pages/Cases and sleeves/cases'
+
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Cases from "../Pages/Cases and sleeves/Cases";
+
+
 
 import SingleWatchband from "./NewArrivalComp/SinglePage/SingleWatchband"
-// import Cases from '../Pages/Cases and sleeves/Cases'
+
+// import Home from '../Pages/Home/Home'
+// import PhoneCovers from './Cases and covers/GroupSingle/PhoneCovers'
+
+
 import Home from '../Pages/Home/Home'
+import { AccountPage } from '../Pages/UserAccount/AccountPage'
+import { Rewards } from '../Pages/UserAccount/Reward'
 import FilterMobiles from './Cases and covers/FilterMobiles'
 import PhoneCovers from './Cases and covers/GroupSingle/Iphone.jsx/PhoneCovers'
 import OppoCover from './Cases and covers/GroupSingle/Oppo/OppoCover'
@@ -18,6 +28,7 @@ import LaptopCoverNavbar from './Laptop Macbook Sleeves/GroupSingle/LaptopCoverN
 import MacbookSleeves from './Laptop Macbook Sleeves/GroupSingle/MacbookSleeves'
 import Messenger from './Laptop Macbook Sleeves/GroupSingle/Messenger'
 import ZippedSleeves from './Laptop Macbook Sleeves/GroupSingle/ZippedSleeves'
+
 import NewArrivalComp from './NewArrivalComp/NewArrivalComp'
 import NewArrivalsPage from '../Pages/NewArrivalsPage.jsx/NewArrivalsPage'
 import Watchbands from './NewArrivalComp/Watchbands'
@@ -28,14 +39,21 @@ import ChargingSolution from './NewArrivalComp/ChargingSolution'
 import AllArrivals from './NewArrivalComp/AllArrivals'
 import Cart from "../Pages/cart/Cart";
 import BuyNow from "../Pages/BuyNow";
+
+
+
+
+
+
 export default function AllRoutes() {
+  console.log("dbdf");
   return (
     <div>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/cases' element={<Cases/>}/>
             <Route path='/cases/phonecovers' element={<PhoneCovers/>}/>
-            {/* <Route path='/rewards' element={<Rewards/>}/> */}
+            <Route path='/rewards' element={<Rewards/>}/>
             <Route path='/cases/phonecovers' element={<FilterMobiles/>}/>
             <Route path='/cases/phonecovers/apple' element={<PhoneCovers/>}/>
             <Route path='/cases/phonecovers/samsung' element={<SamsumgCover/>}/>
@@ -62,7 +80,31 @@ export default function AllRoutes() {
             <Route path="/cart" element={<Cart />} />
         <Route path="/buynow" element={<BuyNow />} />
        <Route path="/singlewatchband/:id" element={<SingleWatchband/>}></Route>
+       <Route path="/account/*" element={<AccountPage />} />
+       
+
+        {/* <Route path='/cases/phonecovers' element={<PhoneCovers/>}/> */}
+      {/* </Routes>
+
+      <Routes>
+        <Route path="/cases/phonecovers" element={<FilterMobiles />} /> */}
+        {/* <Route path='/rewards' element={<Rewards/>}/> */}
+       
+        {/* <Route path="/cases/phonecovers/apple" element={<PhoneCovers />} /> */}
+
+        <Route
+          path="/iphoneCovers/:id"
+          element={<IndividualPhoneCoverData />}
+        />
+       
+        {/* <Route path='/cases/phonecovers' element={<PhoneCovers/>}/> */}
+        <Route path="/accesories" element={<AllAccessories />} />
+        <Route path="/sale" element={<Sale />} />
+        <Route path="/wallets" element={<AllAccessories />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/buynow" element={<BuyNow />} />
+      
         </Routes>
     </div>
-  )
+  );
 }
