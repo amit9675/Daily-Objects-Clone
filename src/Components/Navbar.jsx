@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to={"/"}>
+      <a href="./home.jsx">
         <img className="logo" src="logo.jpg" alt="" />
-      </Link>
+      </a>
       <div class="container">
         <div class="row">
           <div class="header-item item-center">
@@ -201,9 +201,9 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li class="menu-item-has-children">
-                  <Link to={"/accesories"} id="new">
+                  <a href="#" id="new">
                     ACCESSORIES
-                  </Link>
+                  </a>
                   <div class="sub-menu mega-menu mega-menu-column-4">
                     <div class="list-item">
                       <ul>
@@ -309,14 +309,14 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li class="menu-item-has-children">
-                  <Link to={"/sale"} id="new">
+                  <a href="" id="new">
                     SALE
-                  </Link>
+                  </a>
                 </li>
                 <li class="menu-item-has-children">
-                  <Link to={"/wallets"} id="new">
+                  <a href="" id="new">
                     BAGS & WALLETS
-                  </Link>
+                  </a>
                   <div class="sub-menu mega-menu mega-menu-column-4">
                     <div class="list-item">
                       <ul>
@@ -569,10 +569,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar__icons">
-        <a href="./cart.jsx">
+        <a href="./Cart.jsx">
           <FaShoppingCart />
         </a>
-        <a href="/account/*">
+        <a href="./account.jsx">
           <FaUser />
         </a>
         <a href="./search.jsx">

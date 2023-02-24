@@ -1,19 +1,20 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import "./App.css";
-import AllRoutes from "./Components/AllRoutes";
-import { AccountPage } from "./Pages/UserAccount/AccountPage";
-import Footer from "./Components/Footer";
+import axios from 'axios';
+import { useEffect ,useState} from 'react';
+import './App.css';
+import AllRoutes from './Components/AllRoutes';
+import { AccountPage } from './Pages/UserAccount/AccountPage';
 
 function App() {
-  return (
 
-    <div className="App">
-      <AllRoutes />
-      <Footer />
-      {/* <AccountPage/> */}
+
+  
+  return (
+    <div className="App">     
+      <AllRoutes/>
+      <AccountPage/>
+      
+
     </div>
   );
 }
-
 export default App;
