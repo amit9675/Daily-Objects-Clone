@@ -4,7 +4,7 @@ import SingleItem from "./SingleItem";
 import NewArrivalNavbar from "./NewArrivalNavbar";
 
 const getTheCharger = () => {
-  return axios.get(`http://localhost:8080/Desks`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/Desks`);
 };
 
 export default function Desks() {

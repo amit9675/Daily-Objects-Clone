@@ -7,7 +7,7 @@ import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
 
 const getCovers = () => {
-  return axios(` http://localhost:8080/samsungCovers`);
+  return axios(` https://dailyobjects-f06p.onrender.com/samsungCovers`);
 };
 export default function SamsumgCover() {
   const [phoneCover, setPhoneCovers] = useState([]);

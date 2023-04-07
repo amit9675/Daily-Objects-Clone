@@ -7,7 +7,7 @@ import ImageEveryPage from "../../ImageEveryPage";
 import Navbar from "../../../Navbar";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/oppoCovers`);
+  return axios(`https://dailyobjects-f06p.onrender.com/oppoCovers`);
 };
 export default function OppoCover() {
   const [phoneCover, setPhoneCovers] = useState([]);

@@ -5,7 +5,7 @@ import { useEffect,useState } from "react";
 // import SIngleItemMap from "../Laptop Macbook Sleeves/GroupSingle/SIngleItemMap";
 // import SIngleItemMap from "../Laptop Macbook Sleeves/GroupSingle/SIngleItemMap";
 const getTheLaptop = () => {
-  return axios.get(`http://localhost:8080/watchbands`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/watchbands`);
 };
 export default function Watchbands() {
   const [laptopCover, setLaptopCover] = useState([]);

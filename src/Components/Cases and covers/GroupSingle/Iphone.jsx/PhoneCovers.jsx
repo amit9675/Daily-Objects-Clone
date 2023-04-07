@@ -6,7 +6,7 @@ import ImageEveryPage from "../../ImageEveryPage";
 import Navbar from "../../../Navbar";
 // import PhoneCoverItem from "./CoverItem/PhoneCoverItem";
 const getCovers = () => {
-  return axios(`http://localhost:8080/iphoneCovers`);
+  return axios(`https://dailyobjects-f06p.onrender.com/iphoneCovers`);
 };
 export default function PhoneCovers() {
   const [phoneCover, setPhoneCovers] = useState([]);

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import LaptopCoverNavbar from "./LaptopCoverNavbar";
 import SIngleItemMap from "./SIngleItemMap";
 const getTheLaptop = () => {
-  return axios.get(` http://localhost:8080/zippedSleeves`);
+  return axios.get(` https://dailyobjects-f06p.onrender.com/zippedSleeves`);
 };
 export default function ZippedSleeves() {
   const [laptopCover, setLaptopCover] = useState([]);

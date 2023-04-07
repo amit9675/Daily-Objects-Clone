@@ -11,7 +11,7 @@ export const Wishlist =()=>{
     const [change,setChange]=useState(false);
   let {email} = JSON.parse(localStorage.getItem("userName"));
     useEffect(()=>{
-        axios.get('http://localhost:8080/WishlistiphoneCovers')
+        axios.get('https://dailyobjects-f06p.onrender.com/WishlistiphoneCovers')
         .then((res)=>{
             console.log(res)
             setWishlistData(res.data)
@@ -33,7 +33,7 @@ export const Wishlist =()=>{
                 {wishlistData.map((e)=>{
                     // let id=e.id;
                     const handleDeleteFromWishList = () =>{
-                        axios.delete(`http://localhost:8080/WishlistiphoneCovers/${e.id}`)
+                        axios.delete(`https://dailyobjects-f06p.onrender.com/WishlistiphoneCovers/${e.id}`)
                         .then((res)=>{console.log(res)})
                         .catch((err)=>{console.log(err)});
                         setChange((prev)=>!prev)
@@ -46,7 +46,7 @@ export const Wishlist =()=>{
                         price:e.price,
                         quantity:1,
                       }
-                      axios.post(`http://localhost:8080/cartItems`,cartObj)
+                      axios.post(`https://dailyobjects-f06p.onrender.com/cartItems`,cartObj)
                       .then((res)=>{
                         console.log("cartItem",res.data);
                         alert("Added to cart");

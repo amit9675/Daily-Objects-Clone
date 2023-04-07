@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import SingleItem from "./SingleItem";
 import NewArrivalNavbar from "./NewArrivalNavbar";
 const getTheCharger = () => {
-  return axios.get(`http://localhost:8080/chargingSolution`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/chargingSolution`);
 };
 
 export default function ChargingSolution() {

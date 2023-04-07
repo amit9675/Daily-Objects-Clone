@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import SingleItem from "./SingleItem";
 import NewArrivalNavbar from "./NewArrivalNavbar";
 const getTheLaptop = () => {
-  return axios.get(`http://localhost:8080/pedalback`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/pedalback`);
 };
 export default function PedalBackPack() {
   const [laptopCover, setLaptopCover] = useState([]);

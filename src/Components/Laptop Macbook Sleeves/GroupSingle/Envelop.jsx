@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import LaptopCoverNavbar from "./LaptopCoverNavbar";
 import SIngleItemMap from "./SIngleItemMap";
 const getTheLaptop = () => {
-  return axios.get(`http://localhost:8080/envelopeSleeves`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/envelopeSleeves`);
 };
 export default function Envelop() {
   const [laptopCover, setLaptopCover] = useState([]);

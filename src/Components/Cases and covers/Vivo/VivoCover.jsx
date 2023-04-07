@@ -9,7 +9,7 @@ import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/vivoCovers`);
+  return axios(`https://dailyobjects-f06p.onrender.com/vivoCovers`);
 };
 export default function VivoCover() {
   const [phoneCover, setPhoneCovers] = useState([]);

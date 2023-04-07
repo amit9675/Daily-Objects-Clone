@@ -5,7 +5,7 @@ import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
 
 const getCovers = () => {
-  return axios(`  http://localhost:8080/oneplusCovers`);
+  return axios(`  https://dailyobjects-f06p.onrender.com/oneplusCovers`);
 };
 export default function OneplusCover() {
   const [phoneCover, setPhoneCovers] = useState([]);

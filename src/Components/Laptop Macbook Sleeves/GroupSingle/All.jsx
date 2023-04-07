@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import LaptopCoverNavbar from "./LaptopCoverNavbar";
 import SIngleItemMap from "./SIngleItemMap";
 const getTheLaptop = () => {
-  return axios.get(`http://localhost:8080/laptopCovers`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/laptopCovers`);
 };
 export default function All() {
   const [laptopCover, setLaptopCover] = useState([]);

@@ -27,7 +27,7 @@ export const PersonalInfo = () =>{
     const [houseNo,setHouseNo]=useState("");
 
     const fetchPersonalDetails =(personalId)=>{
-        axios.get( `http://localhost:8080/users/${personalId}`)
+        axios.get( `https://dailyobjects-f06p.onrender.com/users/${personalId}`)
         .then((res)=>{
             console.log("personalInfo",res)
             setEmail(res.data.email);

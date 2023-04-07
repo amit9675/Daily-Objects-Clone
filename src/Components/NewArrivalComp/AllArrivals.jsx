@@ -6,7 +6,7 @@ import Cart from "../../Pages/cart/Cart";
 // import SingleItem from "../../../../src/Components/NewArrivalComp/SingleItem";
 import SingleItem from "./SingleItem";
 const getTheLaptop = () => {
-  return axios.get(`http://localhost:8080/NewArrivals`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/NewArrivals`);
 };
 export default function AllArrivals() {
   const [laptopCover, setLaptopCover] = useState([]);
