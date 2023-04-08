@@ -70,7 +70,6 @@ export default function Simple() {
           <HStack spacing={8} alignItems={"center"}>
             <Box>
             <Link to="/">
-
               <img
                 src="https://i.ibb.co/3TjW0sM/logo.png"
                 alt=""
