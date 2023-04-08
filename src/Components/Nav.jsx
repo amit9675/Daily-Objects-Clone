@@ -70,10 +70,13 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
+            <Link to="/">
+
               <img
                 src="https://worthy-marble-5256.vercel.app/logo.jpg"
                 alt=""
               />
+            </Link>
             </Box>
             <HStack
               as={"nav"}

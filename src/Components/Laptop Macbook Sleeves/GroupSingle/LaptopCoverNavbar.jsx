@@ -6,7 +6,7 @@ import Navbar from "../../Navbar";
 export default function LaptopCoverNavbar() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div>
         <ImageEveryPage name={`LAPTOP COVERS & SLEEVES`} />
       </div>

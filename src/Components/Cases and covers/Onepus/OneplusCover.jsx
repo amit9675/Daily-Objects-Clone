@@ -16,7 +16,7 @@ export default function OneplusCover() {
 
   return (
     <div>
-      <Navbar />
+    
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>

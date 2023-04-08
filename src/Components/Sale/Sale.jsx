@@ -21,7 +21,7 @@ export default function Sale() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <IndividualForSaleI name={`SALE`} />
       </div>

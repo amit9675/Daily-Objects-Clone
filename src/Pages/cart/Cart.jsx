@@ -38,7 +38,7 @@ export default function Cart() {
   }
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <ImageEveryPage name={`Welcome to the cart page`} />
       <div>
       {cartData.length === 0 ? (

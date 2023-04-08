@@ -6,7 +6,7 @@ import Navbar from "../Navbar";
 export default function NewArrivalNavbar() {
   return (
     <div >
-      <Navbar />
+      {/* <Navbar /> */}
       <div>
         <ImageEveryPage class="border border-gray-500" name={`NEW ARRIVALS`} />
       </div>
