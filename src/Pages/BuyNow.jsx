@@ -26,7 +26,7 @@ export default function Buynow(){
     const [city,setCity]=useState("");
     const [houseNo,setHouseNo]=useState("");
     const getBuyItem=()=>{
-      axios.get(`http://localhost:8080/cartItem/${buyId}`)
+      axios.get(`https://dailyobjects-f06p.onrender.com/cartItem/${buyId}`)
       .then((res)=>{
         setBuyProduct(res.data);
         console.log(res.data)
@@ -38,7 +38,7 @@ export default function Buynow(){
       .catch((E)=>console.log(E))
     }
   useEffect(()=>{
-    axios.get(`http://localhost:8080/users/${personalId}`)
+    axios.get(`https://dailyobjects-f06p.onrender.com/users/${personalId}`)
     .then((res)=>{console.log(res);
       setEmail(res.data.email);
       setName(res.data.name);
@@ -57,7 +57,7 @@ export default function Buynow(){
 
   const handleSubmit=()=>{
     let obj={name,area,state,city,phone,houseNo,pincode,email};
-    axios.patch(`http://localhost:8080/users/${personalId}`,obj)
+    axios.patch(`https://dailyobjects-f06p.onrender.com/users/${personalId}`,obj)
     .then((res)=>{
         console.log("after submit",res);
         let user={name,email}

@@ -8,7 +8,7 @@ import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/xiaomiCovers`);
+  return axios(`https://dailyobjects-f06p.onrender.com/xiaomiCovers`);
 };
 export default function NothingCover() {
   const [phoneCover, setPhoneCovers] = useState([]);

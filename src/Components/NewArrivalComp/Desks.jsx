@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SingleItem from "./SingleItem";
 import NewArrivalNavbar from "./NewArrivalNavbar";
+import { SimpleGrid } from "@chakra-ui/react";
 
 const getTheCharger = () => {
-  return axios.get(`http://localhost:8080/Desks`);
+  return axios.get(`https://dailyobjects-f06p.onrender.com/Desks`);
 };
 
 export default function Desks() {
@@ -16,18 +17,20 @@ export default function Desks() {
   return (
     <div>
       <NewArrivalNavbar />
-      <div   class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 "style={{
-         
-          width: "95%",
-          margin: "auto",
-          gap: "20px",
-        }}>
+      <SimpleGrid
+        columns={[1, 2, 4, 4]}
+        w={"100%"}
+        gap={"30px"}
+        // border={"2px solid red"}
+        margin={"auto"}>
+
         {charging?.map((el) => (
           <div class=" mx-auto w-6/8 ">
             <SingleItem key={el.id} {...el} brand={`Desks`} />
           </div>
         ))}
-      </div>
+      {/* </div> */}
+        </SimpleGrid>
     </div>
   );
 }

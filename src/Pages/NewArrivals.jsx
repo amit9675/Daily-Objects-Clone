@@ -9,7 +9,7 @@ const NewArrivals = () => {
     useEffect(()=>{
         const getProducts=async()=>{
             setLoading(true)
-            const res=await axios('http://localhost:8080/NewArrivals').then((res)=>console.log(res))
+            const res=await axios('https://dailyobjects-f06p.onrender.com/NewArrivals').then((res)=>console.log(res))
         }
         getProducts()
     },[])

@@ -5,9 +5,10 @@ import Navbar from "../../Navbar";
 // import ImageEveryPage from "../../ImageEveryPage";
 import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
+import { SimpleGrid } from "@chakra-ui/react";
 
 const getCovers = () => {
-  return axios(` http://localhost:8080/samsungCovers`);
+  return axios(` https://dailyobjects-f06p.onrender.com/samsungCovers`);
 };
 export default function SamsumgCover() {
   const [phoneCover, setPhoneCovers] = useState([]);
@@ -21,18 +22,18 @@ export default function SamsumgCover() {
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>
-      <div
-        class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 "
-        style={{
-          width: "95%",
-          margin: "auto",
-          gap: "20px",
-        }}
+      <SimpleGrid
+        columns={[1, 2, 4, 4]}
+        w={"100%"}
+        gap={"30px"}
+        // border={"2px solid red"}
+        margin={"auto"}
       >
         {phoneCover?.map((el) => (
           <PhoneCoverItem key={el.id} brand={`samsungCovers`} {...el} />
         ))}
-      </div>
+      </SimpleGrid>
+      {/* </div> */}
     </div>
   );
 }

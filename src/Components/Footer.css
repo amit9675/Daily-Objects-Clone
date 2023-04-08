@@ -1,5 +1,6 @@
 #icons {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     font-size: 12px;
     padding: 40px;
@@ -8,16 +9,19 @@
   
   .socials {
     padding: 30px;
+    width:100%;
     text-decoration: none;
   }
   
   .socials > .leftSocials {
+    border:2px solid yellowgreen;
     display: flex;
     color: black;
     line-height: 2.5rem;
     float: left;
-    gap: 180px;
+    /* gap: 80px; */
     padding: 30px;
+    /* width:100%; */
     border-right: 1px solid rgb(209, 209, 209);
   }
   
@@ -53,11 +57,13 @@
   }
   
   .payements_img {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
     gap: 10px;
     border-bottom: 1px solid rgb(209, 209, 209);
     padding: 20px;
+    margin: auto;
   }
   
   .Reviews {
@@ -66,9 +72,10 @@
   }
   
   .bottomTabs1 {
-    display: flex;
+    /* display: flex; */
     text-decoration: none;
     color: black;
+    width: 100%;
   }
   
   .bottomTabs1 > .bottomTabs_list {
@@ -76,6 +83,8 @@
     line-height: 2rem;
     font-size: 12px;
     gap: 60px;
+    width: 100%;
+    border:1px solid teal;
     padding: 20px;
   }
   .bottomTabs2 > div > h4 {

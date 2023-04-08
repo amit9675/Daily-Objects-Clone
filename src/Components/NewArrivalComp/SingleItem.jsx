@@ -14,10 +14,10 @@ export default function SingleItem({
 }) {
   const [isThere, setisThere] = useState([]);
   const postItem = async (id) => {
-    let result1 = await axios.get(`http://localhost:8080/NewArrivals/${id}`);
+    let result1 = await axios.get(`https://dailyobjects-f06p.onrender.com/NewArrivals/${id}`);
     const newObj = result1.data;
     let result2 = await axios.post(
-      ` http://localhost:8080/WishlistiphoneCovers`,
+      ` https://dailyobjects-f06p.onrender.com/WishlistiphoneCovers`,
       newObj
     );
     // return axios.post

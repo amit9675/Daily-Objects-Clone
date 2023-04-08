@@ -12,7 +12,7 @@ const navigate = useNavigate()
   const [individualData, setIndividual] = useState([]);
   const handleClick = ()=>{
     const newObj = individualData
-    axios.post(`http://localhost:8080/cartItems`,newObj)
+    axios.post(`https://dailyobjects-f06p.onrender.com/cartItems`,newObj)
     alert(`${individualData.title} has been added to the cart`)
   }
   const handleCart  = ()=>{
@@ -20,7 +20,7 @@ navigate(`/cart`)
   }
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/NewArrivals/${params.id}`)
+      .get(`https://dailyobjects-f06p.onrender.com/NewArrivals/${params.id}`)
       .then((res) => setIndividual(res.data))
       .catch(() => alert("error"));
   }, []);

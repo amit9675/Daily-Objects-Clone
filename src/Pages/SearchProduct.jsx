@@ -12,9 +12,9 @@ const SearchProduct = () => {
   const [searchText,setSearchText]=useState("")
   let limit=8
   useEffect(()=>{
-    axios.get(`http://localhost:8080/NewArrivals`).then((res)=>setSearch(res.data))
+    axios.get(`https://dailyobjects-f06p.onrender.com/NewArrivals`).then((res)=>setSearch(res.data))
   },[])
-  console.log(search)
+  // console.log(search)
   return (
   
     <div className="App">

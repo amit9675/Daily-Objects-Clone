@@ -168,7 +168,7 @@ const slider2 = {
 const Home = () => {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div className="topTab1_img">
         <img
           style={{ width: "100%" }}

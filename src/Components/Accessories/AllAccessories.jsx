@@ -8,7 +8,7 @@ import Navbar from "../Navbar";
 import Individual from "./Individual";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/allaccesories`);
+  return axios(`https://dailyobjects-f06p.onrender.com/allaccesories`);
 };
 export default function AllAccessories() {
   const [phoneCover, setPhoneCovers] = useState([]);
@@ -18,7 +18,7 @@ export default function AllAccessories() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <ImageEveryPage name={`ALL ACCESSORIES`} />
       </div>
@@ -31,6 +31,7 @@ export default function AllAccessories() {
           gap: "20px",
         }}
       >
+      
         {phoneCover?.map((el) => (
           <Individual key={el.id} brand={`allaccesories`} {...el} />
         ))}

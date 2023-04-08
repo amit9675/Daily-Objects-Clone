@@ -1,0 +1,16 @@
+.navbar__icons {
+    display: flex;
+    color: black;
+    gap: 70px;
+    /* border: 2px solid red; */
+    /* justify-content: space-between; */
+    /* margin-left: -100px; */
+  }
+  
+  .navbar__icons i {
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+  /* .body{
+  background-color: red;
+  } */

@@ -7,9 +7,10 @@ import Navbar from "../../Navbar";
 // import ImageEveryPage from "../../ImageEveryPage";
 import PhoneCoverItem from "../GroupSingle/CoverItem/PhoneCoverItem";
 import ImageEveryPage from "../ImageEveryPage";
+import { SimpleGrid } from "@chakra-ui/react";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/vivoCovers`);
+  return axios(`https://dailyobjects-f06p.onrender.com/vivoCovers`);
 };
 export default function VivoCover() {
   const [phoneCover, setPhoneCovers] = useState([]);
@@ -23,19 +24,17 @@ export default function VivoCover() {
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          width: "95%",
-          margin: "auto",
-          gap: "20px",
-        }}
-      >
+      <SimpleGrid
+        columns={[1, 2, 4, 4]}
+        w={"100%"}
+        gap={"30px"}
+        // border={"2px solid red"}
+        margin={"auto"}>
         {phoneCover?.map((el) => (
           <PhoneCoverItem key={el.id} brand={`vivoCovers`} {...el} />
         ))}
-      </div>
+        </SimpleGrid>
+      {/* </div> */}
     </div>
   );
 }

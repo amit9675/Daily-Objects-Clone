@@ -2,7 +2,6 @@ import { Alert, Button, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AlertIcon, AlertTitle, AlertDescription } from "@chakra-ui/react";
-import Navbar from "../../../Navbar";
 import { Link } from "react-router-dom";
 export default function PhoneCoverItem({
   title,
@@ -14,10 +13,10 @@ export default function PhoneCoverItem({
 }) {
   const [isThere, setisThere] = useState([]);
   const postItem = async (id) => {
-    let result1 = await axios.get(`http://localhost:8080/${brand}/${id}`);
+    let result1 = await axios.get(`https://dailyobjects-f06p.onrender.com/${brand}/${id}`);
     const newObj = result1.data;
     let result2 = await axios.post(
-      ` http://localhost:8080/WishlistiphoneCovers`,
+      ` https://dailyobjects-f06p.onrender.com/WishlistiphoneCovers`,
       newObj
     );
     // return axios.post

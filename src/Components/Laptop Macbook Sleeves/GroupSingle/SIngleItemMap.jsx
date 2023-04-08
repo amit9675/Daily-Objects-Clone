@@ -9,10 +9,10 @@ import {
 export default function SIngleItemMap({ title, id, price, image, strike,brand }) {
   const [isThere, setisThere] = useState([]);
   const postItem = async (id) => {
-    let result1 = await axios.get(`http://localhost:8080/${brand}/${id}`);
+    let result1 = await axios.get(`https://dailyobjects-f06p.onrender.com/${brand}/${id}`);
     const newObj = result1.data;
     let result2 = await axios.post(
-      `http://localhost:8080/laptopCovers`,
+      `https://dailyobjects-f06p.onrender.com/laptopCovers`,
       newObj
     );
     // return axios.post
