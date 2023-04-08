@@ -2,7 +2,6 @@ import { Alert, Button, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AlertIcon, AlertTitle, AlertDescription } from "@chakra-ui/react";
-import Navbar from "../../../Navbar";
 import { Link } from "react-router-dom";
 export default function PhoneCoverItem({
   title,

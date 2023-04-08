@@ -16,7 +16,7 @@ export default function Cart() {
   const {isAuth,setBuyId}=useContext(AuthContext);
   React.useEffect(() => {
     axios
-      .get(`http://localhost:8080/cartItems`)
+      .get(`https://dailyobjects-f06p.onrender.com/cartItems`)
       .then((res) => {
         if(isAuth){
         setCartData(res.data);}
@@ -25,14 +25,14 @@ export default function Cart() {
   }, [change,isAuth]);
   const handleBuyNow = async (id) => {
     setBuyId(id);
-    // let result1 = await axios.get(`http://localhost:8080/cartItems/${id}`);
+    // let result1 = await axios.get(`https://dailyobjects-f06p.onrender.com/cartItems/${id}`);
     // console.log(result1.data);
     // const newObj = result1.data;
-    // await axios.post(` http://localhost:8080/buyNow`, newObj);
+    // await axios.post(` https://dailyobjects-f06p.onrender.com/buyNow`, newObj);
     navigate(`/buynow`);
   };
   const handleDelete=(id)=>{
-    axios.delete(`http://localhost:8080/cartItems/${id}`)
+    axios.delete(`https://dailyobjects-f06p.onrender.com/cartItems/${id}`)
     .then((r)=>setChange((p)=>!p))
     .catch((e)=>console.log(e))
   }

@@ -18,7 +18,7 @@ export default function AllAccessories() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <ImageEveryPage name={`ALL ACCESSORIES`} />
       </div>
@@ -31,6 +31,7 @@ export default function AllAccessories() {
           gap: "20px",
         }}
       >
+      
         {phoneCover?.map((el) => (
           <Individual key={el.id} brand={`allaccesories`} {...el} />
         ))}

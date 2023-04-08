@@ -8,6 +8,7 @@ import ImageEveryPage from "../Cases and covers/ImageEveryPage";
 import Navbar from "../Navbar";
 import Individual from "./Individual";
 import IndividualForSaleI from "./IndividualForSale";
+import { SimpleGrid } from "@chakra-ui/react";
 
 const getCovers = () => {
   return axios(`http://localhost:8080/sale`);
@@ -24,19 +25,18 @@ export default function Sale() {
       <div>
         <IndividualForSaleI name={`SALE`} />
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          width: "95%",
-          margin: "auto",
-          gap: "20px",
-        }}
-      >
+      <SimpleGrid
+        columns={[1, 2, 4, 4]}
+        w={"100%"}
+        gap={"30px"}
+        // border={"2px solid red"}
+        margin={"auto"}>
+
         {phoneCover?.map((el) => (
           <Individual key={el.id} brand={`sale`} {...el} />
         ))}
-      </div>
+      {/* </div> */}
+        </SimpleGrid>
     </div>
   );
 }

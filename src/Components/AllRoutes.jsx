@@ -40,7 +40,7 @@ import SingelProduct from './NewArrivalComp/SingleProduct.jsx/SingleProduct';
 import SearchProduct from '../Pages/SearchProduct';
 
 export default function AllRoutes() {
-  console.log("dbdf");
+  // console.log("dbdf");
   return (
     <div>
       <Routes>
