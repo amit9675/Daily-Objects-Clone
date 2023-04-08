@@ -11,7 +11,7 @@ import IndividualForSaleI from "./IndividualForSale";
 import { SimpleGrid } from "@chakra-ui/react";
 
 const getCovers = () => {
-  return axios(`http://localhost:8080/sale`);
+  return axios(`https://dailyobjects-f06p.onrender.com/sale`);
 };
 export default function Sale() {
   const [phoneCover, setPhoneCovers] = useState([]);
@@ -21,7 +21,7 @@ export default function Sale() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <IndividualForSaleI name={`SALE`} />
       </div>

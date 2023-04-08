@@ -18,7 +18,7 @@ const SearchProduct = () => {
   return (
   
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <AllRoutes /> */}
       {/* <Home /> */}
       {/* <Footer /> */}

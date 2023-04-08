@@ -49,14 +49,13 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     {children}
   </Link>
 );
-
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
+    <div className="main">
       <Box
-        className="body"
+        
         bg={useColorModeValue("gray.100", "gray.900")}
         px={6}
       >
@@ -70,10 +69,12 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
+            <Link to="/">
               <img
-                src="https://worthy-marble-5256.vercel.app/logo.jpg"
+                src="https://i.ibb.co/3TjW0sM/logo.png"
                 alt=""
               />
+            </Link>
             </Box>
             <HStack
               as={"nav"}
@@ -105,7 +106,6 @@ export default function Simple() {
                   <FaSearch />
                 </Link>
               </div>
-                      
             </div>
             <Menu>
               <MenuButton
@@ -115,6 +115,7 @@ export default function Simple() {
                 cursor={"pointer"}
                 minW={0}
               >
+              {/* worthy-marble-5256 */}
                 {/* <Link to={'/cart'}>
           <FaShoppingCart />
           </Link> */}
@@ -153,6 +154,6 @@ export default function Simple() {
       </Box>
 
       
-    </>
+    </div>
   );
 }

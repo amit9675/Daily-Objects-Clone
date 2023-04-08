@@ -20,7 +20,7 @@ export default function VivoCover() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>

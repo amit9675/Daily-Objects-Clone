@@ -29,7 +29,7 @@ navigate(`/cart`)
   const ss = `>>`
   return (
     <div>
-      <Navbar />
+    
       <ImageEveryPage />
       <div style={{textAlign:"end"}}>
 

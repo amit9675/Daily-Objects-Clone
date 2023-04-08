@@ -18,7 +18,7 @@ export default function SamsumgCover() {
 
   return (
     <div>
-      <Navbar />
+    
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>

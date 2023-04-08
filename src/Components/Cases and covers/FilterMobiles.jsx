@@ -8,7 +8,7 @@ import Navbar from "../Navbar";
 export default function FilterMobiles() {
   return (
     <div>
-    <Navbar/>
+  {/* /> */}
       <div>
         <ImageEveryPage name={`Select Brand`} />
       </div>
