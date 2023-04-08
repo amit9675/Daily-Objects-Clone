@@ -18,7 +18,7 @@ export default function NothingCover() {
 
   return (
     <div>
-    <Navbar/>
+    {/* <Navbar/> */}
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>
