@@ -17,7 +17,7 @@ function Cases() {
   // console.log("dbdf")
   return (
     <div >
-      <Navbar/>
+      {/* <Navbar/> */}
 <ImageEveryPage name={`CASES & SLEEVES`}/>
       <div
         style={{

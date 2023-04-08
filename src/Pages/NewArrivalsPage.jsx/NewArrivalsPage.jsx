@@ -153,7 +153,7 @@ function NewArrivalsPage() {
   return (
     <div >
         
-      <Navbar />
+      {/* <Navbar /> */}
 <ImageEveryPage name={`NEW ARRIVALS`}/>
       <div class="md:flex md:item-center z-[-1] md:z-auto"
         style={{
