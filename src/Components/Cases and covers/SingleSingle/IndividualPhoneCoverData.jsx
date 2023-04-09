@@ -8,7 +8,7 @@ import ImageEveryPage from "../ImageEveryPage";
 export default function IndividualPhoneCoverData() {
   const params = useParams();
 const navigate = useNavigate()
-  console.log(params);
+console.log(params)
   const [individualData, setIndividual] = useState([]);
   const handleClick = ()=>{
     const newObj = individualData

@@ -6,6 +6,7 @@ import {
   AlertTitle,
   AlertDescription,
 } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
 export default function SIngleItemMap({ title, id, price, image, strike,brand }) {
   const [isThere, setisThere] = useState([]);
   const postItem = async (id) => {
@@ -28,7 +29,9 @@ alert(`${text} has been added to your wishlist`)
   return (
     <div style={{ textAlign: "start" }}>
       <div style={{ backgroundColor: "rgb(247,247,247)" }}>
+      <Link to={`/${brand}/${id}`}>
         <img src={image} alt="" />
+      </Link>
         <Button
           isDisabled={isThere.includes(id)}
           size={"lg"}

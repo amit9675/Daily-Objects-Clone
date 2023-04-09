@@ -1,44 +1,37 @@
-import { background, Button, Heading } from "@chakra-ui/react";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import ImageEveryPage from "../ImageEveryPage";
-
-export default function IndividualOnePlus() {
+export default function WatchBandIndivdual() {
   const params = useParams();
-const navigate = useNavigate()
-console.log(params)
+  const navigate = useNavigate();
+  console.log(params);
   const [individualData, setIndividual] = useState([]);
-  const handleClick = ()=>{
-    const newObj = individualData
-    axios.post(`https://dailyobjects-f06p.onrender.com/cartItems`,newObj)
-    alert(`${individualData.title} has been added to the cart`)
-  }
-  const handleCart  = ()=>{
-navigate(`/cart`)
-  }
-  useEffect(() => {
-    axios
-      .get(`https://dailyobjects-f06p.onrender.com/oneplusCovers/${params.id}`)
-      .then((res) => setIndividual(res.data))
-      .catch(() => alert("error"));
-  }, []);
-  console.log(`individualData`,individualData);
-  const { image, href, id, price, title, strike } = individualData;
-  const ss = `>>`
+  const handleClick = () => {
+    const newObj = individualData;
+    axios.post(`https://dailyobjects-f06p.onrender.com/cartItems`, newObj);
+    alert(`${individualData.title} has been added to the cart`);
+  };
+  const handleCart = () => {
+    navigate(`/cart`);
+  };
+  //   useEffect(() => {
+  //     axios
+  //       .get(`https://dailyobjects-f06p.onrender.com/samsungCovers/${params.id}`)
+  //       .then((res) => setIndividual(res.data))
+  //       .catch(() => alert("error"));
+  //   }, []);
+  //   console.log(`individualData`,individualData);
+  //   const { image, href, id, price, title, strike } = individualData;
+  const ss = `>>`;
   return (
     <div>
-    
       <ImageEveryPage />
-      <div style={{textAlign:"end"}}>
-
-     <Button marginTop={"-250px"} marginLeft="300px" onClick={handleCart} >Go To Cart {ss}</Button>
+      <div style={{ textAlign: "end" }}>
+        <Button marginTop={"-250px"} marginLeft="300px" onClick={handleCart}>
+          Go To Cart {ss}
+        </Button>
       </div>
       {
-        <div style={{ display: "flex",marginTop:"-100px" }}>
+        <div style={{ display: "flex", marginTop: "-100px" }}>
           <div
             style={{
-             
               width: "50%",
               backgroundColor: `rgb(247,247,247)`,
             }}
@@ -55,7 +48,8 @@ navigate(`/cart`)
             <Heading size={"md"}>{title}</Heading>
             <br />
             <Heading size={"md"}>
-              Price: {price ? price : 2100} <del style={{ color: "red" }}>{strike}</del>
+              Price: {price ? price : 1900}{" "}
+              <del style={{ color: "red" }}>{strike}</del>
             </Heading>
             <br />
             <hr />
@@ -121,16 +115,36 @@ navigate(`/cart`)
               <Heading>Select Color</Heading>
               <br />
               <div style={{ display: "flex", gap: "30px" }}>
-              
-              <Button borderRadius={"50%"} colorScheme={"red"} onClick={()=>alert(`sorry this color variant is no longer available`)}></Button>
-              <Button borderRadius={"50%"} colorScheme={"green"} onClick={()=>alert(`sorry this color variant is no longer available`)}></Button>
-              <Button borderRadius={"50%"} colorScheme={"teal"} onClick={()=>alert(`sorry this color variant is no longer available`)}></Button>
+                <Button
+                  borderRadius={"50%"}
+                  colorScheme={"red"}
+                  onClick={() =>
+                    alert(`sorry this color variant is no longer available`)
+                  }
+                ></Button>
+                <Button
+                  borderRadius={"50%"}
+                  colorScheme={"green"}
+                  onClick={() =>
+                    alert(`sorry this color variant is no longer available`)
+                  }
+                ></Button>
+                <Button
+                  borderRadius={"50%"}
+                  colorScheme={"teal"}
+                  onClick={() =>
+                    alert(`sorry this color variant is no longer available`)
+                  }
+                ></Button>
               </div>
             </div>
             <br />
             <br />
-            <Button size={"lg"}>BUY NOW</Button> 
-            <Button size={"lg"} marginLeft={"30px"} onClick={handleClick} > Add To Cart</Button>
+            <Button size={"lg"}>BUY NOW</Button>
+            <Button size={"lg"} marginLeft={"30px"} onClick={handleClick}>
+              {" "}
+              Add To Cart
+            </Button>
           </div>
         </div>
       }

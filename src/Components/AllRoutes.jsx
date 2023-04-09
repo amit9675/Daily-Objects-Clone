@@ -1,12 +1,12 @@
 import "./Home.css";
-import Home from './Home';
-import "./Navbar.css"
-import "./Footer.css"
-import "./GoToTop.css"
+import Home from "./Home";
+import "./Navbar.css";
+import "./Footer.css";
+import "./GoToTop.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import GoToTop from "./GoToTop";
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
 import { AccountPage } from "../Pages/UserAccount/AccountPage";
 import { Rewards } from "../Pages/UserAccount/Reward";
 import FilterMobiles from "./Cases and covers/FilterMobiles";
@@ -24,7 +24,7 @@ import Messenger from "./Laptop Macbook Sleeves/GroupSingle/Messenger";
 import ZippedSleeves from "./Laptop Macbook Sleeves/GroupSingle/ZippedSleeves";
 import Cases from "../Pages/Cases and sleeves/Cases";
 import React from "react";
-import AllArrivals from "../Components/NewArrivalComp/AllArrivals"
+import AllArrivals from "../Components/NewArrivalComp/AllArrivals";
 import NewArrivalComp from "./NewArrivalComp/NewArrivalComp";
 import NewArrivalsPage from "../Pages/NewArrivalsPage.jsx/NewArrivalsPage";
 import AllAccessories from "./Accessories/AllAccessories";
@@ -32,30 +32,33 @@ import Sale from "./Sale/Sale";
 import IndividualPhoneCoverData from "./Cases and covers/SingleSingle/IndividualPhoneCoverData";
 import Cart from "../Pages/cart/Cart";
 import BuyNow from "../Pages/BuyNow";
-import Watchbands from './NewArrivalComp/Watchbands';
-import Desks from './NewArrivalComp/Desks';
-import ChargingSolution from './NewArrivalComp/ChargingSolution';
-import PedalBackPack from './NewArrivalComp/PedalBackPack';
-import SingelProduct from './NewArrivalComp/SingleProduct.jsx/SingleProduct';
-import SearchProduct from '../Pages/SearchProduct';
+import Watchbands from "./NewArrivalComp/Watchbands";
+import Desks from "./NewArrivalComp/Desks";
+import ChargingSolution from "./NewArrivalComp/ChargingSolution";
+import PedalBackPack from "./NewArrivalComp/PedalBackPack";
+import SingelProduct from "./NewArrivalComp/SingleProduct.jsx/SingleProduct";
+import SearchProduct from "../Pages/SearchProduct";
+import IndividualOnePlus from "./Cases and covers/SingleSingle/IndividualOnePlus";
+import IndividualForSamsung from "./Cases and covers/SingleSingle/IndividualForSamsung";
+import IndividualAllLaptop from "./Cases and covers/SingleSingle/IndividualAllLaptop";
+import IndividualenvelopeSleeves from "./Cases and covers/SingleSingle/IndividualenvelopeSleeves";
+import IndividualMacbook from "./Cases and covers/SingleSingle/IndividualMacbook";
+import IndividualZipped from "./Cases and covers/SingleSingle/IndividualZipped";
+import IndividualMessenger from "./Cases and covers/SingleSingle/IndividualMessenger";
 
 export default function AllRoutes() {
   // console.log("dbdf");
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        {/* <Route path="/" element={<Navbar/>}/>
-        <Route path="/" element={<GoToTop/>}/>
-        <Route path="/" element={<Footer />} /> */}
-
+        <Route path="/" element={<Home />} />
         <Route path="/cases/phonecovers" element={<FilterMobiles />} />
         <Route path="/rewards" element={<Rewards />} />
         <Route path="/account/*" element={<AccountPage />} />
 
         <Route path="/cases" element={<Cases />} />
-        
-      <Route path="/searchproduct" element={<SearchProduct/>}></Route>
+
+        <Route path="/searchproduct" element={<SearchProduct />}></Route>
         <Route path="/cases/phonecovers/apple" element={<PhoneCovers />} />
         <Route path="/cases/phonecovers/samsung" element={<SamsumgCover />} />
         <Route path="/cases/phonecovers/xiaomi" element={<NothingCover />} />
@@ -71,28 +74,59 @@ export default function AllRoutes() {
         />
         <Route path="/cases/laptopcovers/envelope" element={<Envelop />} />
         <Route path="/cases/laptopcovers/messenger" element={<Messenger />} />
-
         <Route
           path="/iphoneCovers/:id"
           element={<IndividualPhoneCoverData />}
         />
-        <Route path="/NewArrivals/:id"
-        element={<SingelProduct/>}/>
-
-        <Route path="/newarrivalspage" element={<NewArrivalsPage />} />
+        <Route
+          path="/oneplusCovers/:id"
+          element={<IndividualOnePlus />}
+        />
+        <Route
+          path="/samsungCovers/:id"
+          element={<IndividualForSamsung />}
+        />
+        <Route
+          path="/laptopCovers/:id"
+          element={<IndividualAllLaptop />}
+        />
+        <Route
+          path="/envelopeSleeves/:id"
+          element={<IndividualenvelopeSleeves/>}
+        />
+        <Route
+          path="/macbookCases/:id"
+          element={<IndividualMacbook/>}
+        />
+        <Route
+          path="/zippedSleeves/:id"
+          element={<IndividualZipped/>}
+        />
+        <Route
+          path="/messengerBags/:id"
+          element={<IndividualMessenger/>}
+        />
+        <Route path="/NewArrivals/:id" element={<SingelProduct />} />
+     <Route path="/newarrivalspage" element={<NewArrivalsPage />} />
         <Route path="/newarrivalcomp" element={<NewArrivalComp />} />
-        <Route path='/newarrivalcomp/allarrivals'  element={<AllArrivals/>}/>
-        <Route path='/newarrivalcomp/watchbands'  element={<Watchbands/>}/>
-        <Route path='/newarrivalcomp/chargingsolution'  element={<ChargingSolution/>}/>
-        <Route path='/newarrivalcomp/desks'  element={<Desks/>}/>
-        <Route path='/newarrivalcomp/pedalbackpack'  element={<PedalBackPack/>}/>
-      
+        <Route path="/newarrivalcomp/allarrivals" element={<AllArrivals />} />
+        <Route path="/newarrivalcomp/watchbands" element={<Watchbands />} />
+        <Route
+          path="/newarrivalcomp/chargingsolution"
+          element={<ChargingSolution />}
+        />
+        <Route path="/newarrivalcomp/desks" element={<Desks />} />
+        <Route
+          path="/newarrivalcomp/pedalbackpack"
+          element={<PedalBackPack />}
+        />
+
         <Route path="/accesories" element={<AllAccessories />} />
         <Route path="/sale" element={<Sale />} />
         <Route path="/wallets" element={<AllAccessories />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/buynow" element={<BuyNow />} />
       </Routes>
-    </div>
-  );
+    </div>
+  );
 }
