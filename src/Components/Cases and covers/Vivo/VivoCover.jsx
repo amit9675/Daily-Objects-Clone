@@ -14,8 +14,13 @@ const getCovers = () => {
 };
 export default function VivoCover() {
   const [phoneCover, setPhoneCovers] = useState([]);
+  const[loading,setLoading] = useState(false)
   useEffect(() => {
-    getCovers().then((res) => setPhoneCovers(res.data));
+    setLoading(prev =>!prev)
+    getCovers().then((res) => {
+      setLoading(prev =>!prev)
+
+      setPhoneCovers(res.data)});
   }, []);
 
   return (
@@ -24,16 +29,26 @@ export default function VivoCover() {
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>
-      <SimpleGrid
-        columns={[1, 2, 4, 4]}
+      { loading ? (
+          <div style={{margin:"auto"}}>
+          <img width={"100%"}  src="https://i.ibb.co/7gCTcqc/Daily-Hub-gif.gif" alt="error" />
+          </div>
+ ) : (
+  <SimpleGrid
+        columns={[1, 2, 3, 4]}
         w={"100%"}
         gap={"30px"}
-        // border={"2px solid red"}
+        border={"2px solid red"}
         margin={"auto"}>
+
         {phoneCover?.map((el) => (
           <PhoneCoverItem key={el.id} brand={`vivoCovers`} {...el} />
         ))}
+      {/* </div> */}
         </SimpleGrid>
+ )
+ 
+ }
       {/* </div> */}
     </div>
   );

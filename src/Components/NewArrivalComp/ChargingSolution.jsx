@@ -10,14 +10,26 @@ const getTheCharger = () => {
 
 export default function ChargingSolution() {
   const [charging, setCharging] = useState([]);
+  const[loading,setLoading] = useState(false)
+
   useEffect(() => {
-    getTheCharger().then((res) => setCharging(res.data));
+    setLoading(prev =>!prev)
+
+    getTheCharger().then((res) => {
+      setLoading(prev =>!prev)
+
+      setCharging(res.data)});
   }, []);
-  console.log(charging);
+  // console.log(charging);
   return (
     <div>
       <NewArrivalNavbar />
-      <SimpleGrid
+      { loading ? (
+          <div style={{margin:"auto"}}>
+          <img width={"100%"}  src="https://i.ibb.co/7gCTcqc/Daily-Hub-gif.gif" alt="error" />
+          </div>
+ ) : (
+  <SimpleGrid
         columns={[1, 2, 4, 4]}
         w={"100%"}
         gap={"30px"}
@@ -30,6 +42,10 @@ export default function ChargingSolution() {
           </div>
         ))}
         </SimpleGrid>
+ )
+ 
+ }
+      
       {/* </div> */}
     </div>
   );
