@@ -5,21 +5,33 @@ import ImageEveryPage from "../../ImageEveryPage";
 import Navbar from "../../../Navbar";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 // import PhoneCoverItem from "./CoverItem/PhoneCoverItem";
-const getCovers = () => {
-  return axios(`https://dailyobjects-f06p.onrender.com/iphoneCovers`);
+const getCovers = async() => {
+  return await axios(`https://dailyobjects-f06p.onrender.com/iphoneCovers`);
 };
 export default function PhoneCovers() {
   const [phoneCover, setPhoneCovers] = useState([]);
+  const[loading,setLoading] = useState(false)
   useEffect(() => {
-    getCovers().then((res) => setPhoneCovers(res.data));
+    setLoading(prev =>!prev)
+    getCovers().then((res) => {
+      setLoading(prev => !prev)
+      setPhoneCovers(res.data)
+    });
   }, []);
+  console.log(loading)
   return (
     <div style={{width:"100%" }} >
       {/* <Navbar /> */}
       <div>
         <ImageEveryPage name={`PHONE COVERS`} />
       </div>
-      <SimpleGrid
+      {
+        loading ? (
+          <div style={{margin:"auto"}}>
+          <img width={"100%"}  src="https://i.ibb.co/7gCTcqc/Daily-Hub-gif.gif" alt="error" />
+          </div>
+ ) :(
+          <SimpleGrid
         columns={[1, 2, 3, 4]}
         // w={"100%"}
         gap={"30px"}
@@ -37,6 +49,9 @@ export default function PhoneCovers() {
           <PhoneCoverItem key={el.id} brand={`iphoneCovers`} {...el} />
         ))}
       </SimpleGrid>
+        )
+      }
+     
     </div>
   );
 }
