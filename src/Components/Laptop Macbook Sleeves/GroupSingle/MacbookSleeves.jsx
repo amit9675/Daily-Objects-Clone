@@ -36,7 +36,7 @@ export default function MacbookSleeves() {
 
         {laptopCover?.map((el) => (
           <div>
-            <SIngleItemMap key={el.id} {...el} brand={`laptopCovers`} />
+            <SIngleItemMap key={el.id} {...el} brand={`macbookCases`} />
           </div>
         ))}
       {/* </div> */}

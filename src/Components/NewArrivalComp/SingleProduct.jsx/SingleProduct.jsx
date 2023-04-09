@@ -29,14 +29,14 @@ navigate(`/cart`)
   const ss = `>>`
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <ImageEveryPage />
       <div style={{textAlign:"end"}}>
 
      <Button marginTop={"-250px"} marginLeft="300px" onClick={handleCart} >Go To Cart {ss}</Button>
       </div>
       {
-        <div class="card flex flex-col lg:flex-row mx-10 md:mx-20  lg:mx-20 rounded-lg">
+        <div>
           <div
             style={{
              
@@ -56,7 +56,7 @@ navigate(`/cart`)
             <Heading size={"md"}>{title}</Heading>
             <br />
             <Heading size={"md"}>
-              Price: {price} <del style={{ color: "red" }}>{strike}</del>
+              Price: {price ? price : 4500} <del style={{ color: "red" }}>{strike}</del>
             </Heading>
             <br />
             <hr />

@@ -2,9 +2,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ImageEveryPage from "../Cases and covers/ImageEveryPage";
-
-// import ImageEveryPage from "../ImageEveryPage";
-import Navbar from "../Navbar";
 import Individual from "./Individual";
 
 const getCovers = () => {

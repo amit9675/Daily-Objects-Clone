@@ -16,6 +16,7 @@ export default function All() {
       setLoading(prev =>!prev)
       setLaptopCover(res.data)});
   }, []);
+  console.log(laptopCover)
   return (
     <div>
       <LaptopCoverNavbar />

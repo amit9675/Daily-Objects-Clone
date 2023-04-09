@@ -29,7 +29,6 @@ export default function SingleItem({
     postItem(id);
     alert(`${text} has been added to your wishlist`);
   };
-
   return (
     <div>
       <div style={{ textAlign: "start" }}>
@@ -50,7 +49,7 @@ export default function SingleItem({
           {title}
         </Heading>
         <h1>
-          {price} <del>{strike}</del>{" "}
+         Price: {price.length<8 ? price : 2100} <del>{strike ? strike : 4500}</del>{" "}
         </h1>
         <Heading size={"xs"} color="red">
           BUY 1 GET 1 FREE

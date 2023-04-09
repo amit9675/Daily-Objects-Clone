@@ -1,10 +1,12 @@
+
 import { background, Button, Heading } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Navbar from "../../Navbar";
 import ImageEveryPage from "../ImageEveryPage";
 
-export default function IndividualOnePlus() {
+export default function IndividualAllLaptop() {
   const params = useParams();
 const navigate = useNavigate()
 console.log(params)
@@ -19,7 +21,7 @@ navigate(`/cart`)
   }
   useEffect(() => {
     axios
-      .get(`https://dailyobjects-f06p.onrender.com/oneplusCovers/${params.id}`)
+      .get(`https://dailyobjects-f06p.onrender.com/laptopCovers/${params.id}`)
       .then((res) => setIndividual(res.data))
       .catch(() => alert("error"));
   }, []);
@@ -38,7 +40,6 @@ navigate(`/cart`)
         <div style={{ display: "flex",marginTop:"-100px" }}>
           <div
             style={{
-             
               width: "50%",
               backgroundColor: `rgb(247,247,247)`,
             }}
@@ -55,7 +56,7 @@ navigate(`/cart`)
             <Heading size={"md"}>{title}</Heading>
             <br />
             <Heading size={"md"}>
-              Price: {price ? price : 2100} <del style={{ color: "red" }}>{strike}</del>
+              Price: {price?price:1900} <del style={{ color: "red" }}>{strike}</del>
             </Heading>
             <br />
             <hr />

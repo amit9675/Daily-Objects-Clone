@@ -49,7 +49,7 @@ export default function PhoneCoverItem({
           {title}
         </Heading>
         <h1>
-          {price} <del>{strike}</del>{" "}
+        Price:  {price ? price : 2100} <del>{strike?strike:3500}</del>{" "}
         </h1>
         <Heading size={"xs"} color="red">
           BUY 1 GET 1 FREE

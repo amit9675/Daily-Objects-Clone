@@ -36,7 +36,7 @@ export default function OneplusCover() {
         columns={[1, 2, 3, 4]}
         w={"100%"}
         gap={"30px"}
-        border={"2px solid red"}
+        // border={"2px solid red"}
         margin={"auto"}>
 
         {phoneCover?.map((el) => (
