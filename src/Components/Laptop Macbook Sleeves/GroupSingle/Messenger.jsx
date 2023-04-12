@@ -22,7 +22,7 @@ export default function Envelop() {
       <LaptopCoverNavbar />
       { loading ? (
           <div style={{margin:"auto"}}>
-          <img width={"100%"}  src="https://i.ibb.co/7gCTcqc/Daily-Hub-gif.gif" alt="error" />
+          <img width={"100%"}  src="https://www.cssscript.com/demo/google-4-dot-loading-indicator/" alt="error" />
           </div>
  ) : (
   <SimpleGrid

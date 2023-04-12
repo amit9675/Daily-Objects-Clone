@@ -21,8 +21,8 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const Links = [
-  { name: "NEW ARRIVAL", to: "/newarrivalspage" },
   { name: "CASES & SLEEVES", to: "/cases" },
+  { name: "NEW ARRIVAL", to: "/newarrivalspage" },
   { name: "ACCESSORIES", to: "/accesories" },
   { name: "SALE", to: "/sale" },
   { name: "BAGS & WALLETS", to: "/wallets" },
