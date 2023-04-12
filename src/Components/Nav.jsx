@@ -144,9 +144,9 @@ export default function Simple() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link, i) => (
-                <NavLink to={link.to} key={link.name}>
+                <Link to={link.to} key={link.name}>
                   {link.name}
-                </NavLink>
+                </Link>
               ))}
             </Stack>
           </Box>

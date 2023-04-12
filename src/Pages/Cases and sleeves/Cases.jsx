@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import { extendTheme } from "@chakra-ui/react";
 import ImageEveryPage from "../../Components/Cases and covers/ImageEveryPage";
-
+import { SimpleGrid } from "@chakra-ui/react";
 
 // import Navbar from "../../components/Navbar";
 // import ImageEveryPage from "../../Components/Cases and covers/ImageEveryPage";
@@ -19,16 +19,12 @@ function Cases() {
     <div >
       {/* <Navbar/> */}
 <ImageEveryPage name={`CASES & SLEEVES`}/>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          // border: "2px solid red",
-          width: "70%",
-          margin: "auto",
-          gap: "0px",
-          marginTop: "50px",
-        }}
+      <SimpleGrid
+         columns={[1, 2, 3, 4]}
+        w={"100%"}
+        gap={"30px"}
+        // border={"2px solid red"}
+        margin={"auto"}
       >
         <div className="navLinksToFurther" >
           <Link to={'/cases/phonecovers'}>
@@ -143,7 +139,7 @@ function Cases() {
             </Heading>
           </Link>
         </div>
-      </div>
+      </SimpleGrid>
     </div>
   );
 }
