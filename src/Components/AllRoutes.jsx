@@ -51,7 +51,11 @@ export default function AllRoutes() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>}/>
+        {/* <Route path="/" element={<Navbar/>}/>
+        <Route path="/" element={<GoToTop/>}/>
+        <Route path="/" element={<Footer />} /> */}
+
         <Route path="/cases/phonecovers" element={<FilterMobiles />} />
         <Route path="/rewards" element={<Rewards />} />
         <Route path="/account/*" element={<AccountPage />} />
@@ -74,6 +78,7 @@ export default function AllRoutes() {
         />
         <Route path="/cases/laptopcovers/envelope" element={<Envelop />} />
         <Route path="/cases/laptopcovers/messenger" element={<Messenger />} />
+
         <Route
           path="/iphoneCovers/:id"
           element={<IndividualPhoneCoverData />}
