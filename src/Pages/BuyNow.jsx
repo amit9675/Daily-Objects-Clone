@@ -75,7 +75,6 @@ const handleOrder=()=>{
   // axios.
 }
   return <>
-  <Navbar/>
   <div style={{border:"1px solid lightgray",margin:"auto",alignItems:"center",padding:"2.5rem"}}>
     <Heading as={'h2'} size='xl'>CHECKOUT</Heading>
   </div>
@@ -168,12 +167,12 @@ const handleOrder=()=>{
       <Card  border={"1px solid lightgrey"} w={'70%'} margin="auto" backgroundColor={'gray.50'} textAlign="left">
         <CardBody >
       <HStack justifyContent={'space-between'} margin="0.5rem">
-        <Text>Item Total({buyProduct.length} Items)</Text> 
-        <Text>Rs.{price*qnt}</Text>
+        <Text>Item Total({buyProduct.length || 1} Items)</Text> 
+        <Text>Rs.{price*qnt || 1999}</Text>
       </HStack>
       <HStack justifyContent={'space-between'} margin="0.5rem">
         <Text>Discount</Text>
-        <Text>Rs {price*qnt*30/100}</Text>
+        <Text>Rs {price*qnt*30/100 || 3999}</Text>
       </HStack>
       <HStack justifyContent={'space-between'} margin="0.5rem">
         <Text>Shipping</Text>
@@ -182,7 +181,7 @@ const handleOrder=()=>{
       <Divider/>
       <HStack justifyContent={'space-between'} margin="0.5rem">
       <Text>Grand Total</Text>
-        <Text>Rs {Math.abs(price*qnt-price*qnt*30/100)}</Text>
+        <Text>Rs {Math.abs(price*qnt-price*qnt*30/100) || 7000}</Text>
       </HStack>
         </CardBody>
         <CardFooter justifyContent={'space-between'}>
